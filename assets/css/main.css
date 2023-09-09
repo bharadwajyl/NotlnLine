@@ -232,11 +232,11 @@ ul li{
     }
     
     .big{
-        font-size:1.8em;
+        font-size:1.6em;
     }
     
     .medium{
-        font-size:1.6em;
+        font-size:1.4em;
     }
     
     .small{
@@ -253,6 +253,11 @@ ul li{
     
     .title_header, .title_header p{
         width:100%;
+    }
+    
+    em:after{
+        height:16px;
+        bottom:-20px;
     }
 }
 
