@@ -8,12 +8,15 @@ window.onscroll = function() {
 
 //Overlay
 function overlay(){
-    $(".overlay").length > 0 ? $(".overlay").remove() : $("body").append('<div class="overlay" onclick="overlay()"></div>');
+    if ($(".overlay").length > 0){
+        $(".overlay").remove();
+        $("body").css({"overflow-y":"auto"});
+    } else {
+        $("body").append('<div class="overlay" onclick="overlay()"></div>');
+        $("body").css({"overflow-y":"hidden"});
+    }
     if ($("nav ul").css("right") >= "0px"){ $("nav ul").css("right","-100%"); }
 }
 
 
-//Onresize reload
-$(window).on("resize", function(){
-    setTimeout(function(){ window.location.reload(); });
-});
+
